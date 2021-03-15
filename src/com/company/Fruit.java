@@ -1,13 +1,13 @@
 package com.company;
 
 public class Fruit {
-    protected boolean fresh;
+    private boolean fresh;
 
-    public void setFresh(boolean fresh) {
+    public final void setFresh(final boolean fresh) {
         this.fresh = fresh;
     }
 
-    public boolean isFresh() {
+    public final boolean isFresh() {
         return this.fresh;
     }
 

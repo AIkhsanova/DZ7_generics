@@ -1,15 +1,16 @@
 package com.company;
 
 public class Box<T> {
-    protected T element;
+    private T element;
 
 
-    public T get() {
+    public final T get() {
         return element;
     }
 
-    public void put(T element) {
-        this.element = element;
+
+    public final void put(final T elements) {
+        this.element = elements;
     }
 
 }

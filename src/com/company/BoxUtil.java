@@ -1,12 +1,12 @@
 package com.company;
 
 public class BoxUtil {
-    public static <T> void copyFromBoxToBox(Box<T> src, Box<? super T> dest) {
+    public static <T> void copyFromBoxToBox(final Box<T> src, final Box<? super T> dest) {
         T element = src.get();
         dest.put(element);
     }
 
-    public static <T extends Fruit> void copyFreshFruitFromBoxToBox(Box<T> src, Box<? super T> dest) {
+    public static <T extends Fruit> void copyFreshFruitFromBoxToBox(final Box<T> src, final Box<? super T> dest) {
         T element = src.get();
         if (element.isFresh()) {
             dest.put(element);
@@ -14,13 +14,13 @@ public class BoxUtil {
     }
 
 
-    public static <T> void printElementFromTwoBoxes(Box<Box<T>> box) {
-        Box<T> inner_box = box.get();
-        System.out.println(inner_box.get());
+    public static <T> void printElementFromTwoBoxes(final Box<Box<T>> box) {
+        Box<T> inBox = box.get();
+        System.out.println(inBox.get());
 
     }
 
-    public static <T> void printElementFromBoxes(Box<T> box) {
+    public static <T> void printElementFromBoxes(final Box<T> box) {
         T element = box.get();
         if (element instanceof Box) {
             BoxUtil.printElementFromBoxes((Box<?>) element);
