@@ -8,7 +8,7 @@ public class BoxUtil {
 
     public static <T extends Fruit> void copyFreshFruitFromBoxToBox(final Box<T> src, final Box<? super T> dest) {
         T element = src.get();
-        if (element.isFresh()) {
+        if (element != null && element.isFresh()) {
             dest.put(element);
         }
     }
