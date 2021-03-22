@@ -8,9 +8,10 @@ public class Main {
         Box<Apple> appleBox = new Box<>();
 
         BoxUtil.copyFreshFruitFromBoxToBox(appleBox, fruitBox);
-        //BoxUtil.copyFromBoxToBox(appleBox, fruitBox);
-        System.out.println(fruitBox.get());
 
+        System.out.println(fruitBox.get());
+        BoxUtil.copyFromBoxToBox(appleBox, fruitBox);
+        System.out.println(fruitBox.get());
         fruitBox.put(fruit);
 
 
